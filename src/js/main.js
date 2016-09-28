@@ -52,6 +52,30 @@ $('#nav').affix({
       {
         $('.navbar-custom').toggle();
       });
+
+    // First, parse the query string
+    var params = {}, queryString = location.hash.substring(1),
+        regex = /([^&=]+)=([^&]*)/g, m;
+    while (m = regex.exec(queryString)) {
+      params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+    }
+
+    // Verify that the access_token is in the response
+    if (params['access_token']) {
+      // And send the token over to the server
+      var url = 'https://auth.emergency-108-hackathon.hasura-app.io/google/authenticate?access_token='
+        + params['access_token'];
+      $.get(url, function(response) {
+        // Sample response:
+        // {
+        //   "hasura_id": 23,
+        //   "hasura_roles": ["user"],
+        //   "auth_token": "aeo8u3dhauh3d39pdsiaw",
+        //   "new_user": true
+        // }
+        console.log(response);
+      });
+    }
   	// Portfolio isotope filter
     $(window).load(function() {
         var $container = $('.portfolio-items');
