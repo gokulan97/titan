@@ -22,8 +22,8 @@
     ================================================== -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,13 +37,15 @@
 
 <!-- Header -->
 <header id="header">
+  <div class="header-img">
+  </div>
   <div class="intro">
     <div class="container">
       <div class="row">
         <div class="intro-text">
-          <h1>Emergency App Hackathon</h1>
+          <h1>108 Emergency Services Application Hackathon</h1>
           <p>Innovate . Develop . Save Lives </p>
-          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn more</a> </div>
       </div>
     </div>
   </div>
@@ -54,21 +56,22 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-        <a class="navbar-brand page-scroll" href="#page-top">John Doe</a> </div>
-      
+        <a class="navbar-brand page-scroll" href="#page-top">Hackathon</a> </div>
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
           <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
           <li class="hidden"> <a href="#page-top"></a> </li>
           <li> <a class="page-scroll" href="#about">About</a> </li>
-          <li> <a class="page-scroll" href="#skills">Title</a> </li>
           <li> <a class="page-scroll" href="#theme">Theme</a> </li>
+          <li> <a class="page-scroll" href="#skills">Prize</a> </li>
+          <li> <a class="page-scroll" href="#achievements">Stats</a> </li>
           <li> <a class="page-scroll" href="#portfolio">FAQ</a> </li>
           <li> <a class="page-scroll" href="#resume">Schedule</a> </li>
           <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-          <li> <a class="page-scroll" href="#">Register</a> </li>
-          <li> <a class="page-scroll" href="#">Login</a> </li>
+          <li> <a class="page-scroll" href="#login">Register</a> </li>
+          <li> <a class="page-scroll" href="#login">Login</a> </li>
         </ul>
       </div>
     </div>
@@ -88,12 +91,12 @@
       <div class="col-md-3 col-sm-3 col-xs-3 text-center"><img src="img/about.jpg" class="img-responsive"></div>
 
       <div class="col-md-8 col-md-offset-2">
-        <div class="about-text">
+        <div class="about-text text-center">
           <p>
             Organised by TNHSP and IIT Madras, The Emergency Services Application Hackathon brings you the opportunity to innovate and have a positive impact on the current structure of the 108 Emergency Services in Tamil Nadu .</p>
           <p>
             In case of any emergency, rapid intervention is critical in determining the outcome. The emergency service personnel have the crucial responsibility of bringing the response time to as minimal as possible.
-          </p> 
+          </p>
           <p>
           And Innovations in technology can play an integral part in achieving this goal. The aim of this hackathon is to come up with solutions that leverage the capabilities of a smart phone and integrate them with the backend infrastructure at the Call-Centre to make the flow of information fast and seamless thereby greatly increasing  the efficiency.
           </p>
@@ -102,102 +105,127 @@
     </div>
   </div>
 </div>
-<!-- Skills Section -->
-<div id="skills" class="text-center">
-  <div class="container">
-    <div class="section-title center">
-      <h2>Title</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-6 skill">
-      <span class="chart" data-percent="85"> <span class="percent">85</span> </span>
-        <h4>HTML5</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="85"> <span class="percent">85</span> </span>
-        <h4>CSS3</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="80"> <span class="percent">80</span> </span>
-        <h4>jQuery</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="80"> <span class="percent">80</span> </span>
-        <h4>WordPress</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="70"> <span class="percent">70</span> </span>
-        <h4>Photoshop</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="65"> <span class="percent">65</span> </span>
-        <h4>Illustrator</h4>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!--Theme Section-->
-<div id="theme" class="text-center">
+<div id="theme" class="">
   <div class="container">
-    <div class="section-title center">
+    <div class="section-title center text-center">
       <h2>Theme</h2>
       <hr>
     </div>
 
     <div class="row">
-      <div class="col-md-2 col-sm-2 skill"></div>
-      <div class="col-md-8 col-sm-8 skill">
-    <h3>The solution should address a minimum of the following aspects:</h3>
+      <div class="col-md-8 col-md-offset-2 center text-center">
+        The theme / problem statement for this hackathon is to develop an
+        applicaiton that will help <i>108 Emergency Services</i> to locate the
+        caller, and dispatch as quickly as possible.<br/><br/>
+        The solution should at least have the following aspects with the given requirements
       </div>
     </div>
-
+    <br/>
     <div class="row">
-      <div class="col-md-1 col-sm-2 skill"></div>
-      <div class="col-md-4 col-sm-8 skill">
-        <h4>A Smartphone Application that</h4>
-        <ul style="text-align:left;">
-        <li>1.Relays the geo-location of the individual to the call centre</li>
-        <li>2.Provides information about nearby hospitals and blood banks obtained from the call centre or present offline</li>
-      </ul>
+      <div class="col-md-4 col-md-offset-2 center">
+        <div class="panel panel-info" style="height: 320px;">
+          <div class="panel-heading text-center">
+            <span><h4>Smartphone App</h4></span>
+          </div>
+          <div class="panel-body" style="padding: 25px;">
+            <ul>
+              <li>Relays the geo-location of caller/user to the call centre</li>
+              <li>Provide information about nearby hospitals and blood banks to user, even in offline mode</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-md-1 col-sm-12 skill"></div>
-      <div class="col-md-1 col-sm-2 skill"></div>
-
-      <div class="col-md-4 col-sm-8 skill">
-        <h4>A Web Service Application that</h4>
-        <ul style="text-align:left;">
-          <li>1.Simulates the backend infrastructure at the call centre</li>
-          <li>2.Access database of the locations of Govt. ambulances and all hospitals in Tamil Nadu</li>
-          <li>3.Logs information about every call to a database and dispatches call to nearest ambulance</li>
-        </ul>
-
+      <div class="col-md-4 center">
+        <div class="panel panel-info" style="height: 320px;">
+          <div class="panel-heading text-center">
+            <span><h4>Web App</h4></span>
+          </div>
+          <div class="panel-body" style="padding: 25px;">
+            <ul>
+              <li>Simulates the backend infrastructure at the call centre</li>
+              <li>Access database of the locations of all ambulances and hospitals in Tamil Nadu</li>
+              <li>Logs information about every call to a database and dispatches call to nearest ambulance</li>
+              <li>Provides an API, to access data stored in the application by other services</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 center text-center">
+        Developing algorithms for analytics on the data collected is encouraged.
+        Any other aspect of innovation above and beyond the aforementioned,
+        in the theme of emergency services are appreciated.
+      </div>
+    </div>
+  </div>
+</div>
 
-      <div class="row">
-      <div class="col-md-4 col-sm-3 skill"></div>
+<!-- Prize Section -->
+<div id="skills" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Prize</h2>
+      <hr>
+    </div>
+    <div class="row">
       <div class="col-md-4 col-sm-6 skill">
-       <h4>A database interface to</h4>
-       <ul style="text-align:left;">
-         <li>1.Retrieve and store data in the format specified so as to not limit its access only to the web service application.</li>
-       </ul>
+      <span class="chart" data-percent="50"> <span class="percentR">₹ 1,00,000</span> </span>
+        <h4>First</h4>
       </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="30"> <span class="percentR">₹ 60,000</span> </span>
+        <h4>Second</h4>
       </div>
-
-      <div class="row">
-        <div class="col-md-2 col-sm-2 skill"></div>
-        <div class="col-md-8 col-sm-8 skill"><h4>retrieve and store data in the format specified so as to not limit its access only to the web service application.</h4></div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="20"> <span class="percentR">₹ 40,000</span> </span>
+        <h4>Third</h4>
       </div>
 
     </div>
   </div>
 </div>
 
+<!-- Stats Section -->
+<div id="achievements" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Emergency Cases</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="200ms">
+        <div class="achievement-box"> <span class="count">310</span>
+          <h4>Road Accidents</h4>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="400ms">
+        <div class="achievement-box"> <span class="count">4700</span>
+          <h4>Deaths</h4>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="600ms">
+        <div class="achievement-box"> <span class="count">30</span>
+          <h4>Response Time</h4>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="800ms">
+        <div class="achievement-box"> <span class="count">8</span>
+          <h4>Ambulances</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Portfolio Section -->
+<!-- FAQ Section -->
 <div id="portfolio">
   <div class="container">
     <div class="section-title text-center center">
       <h2>FAQ</h2>
       <hr>
     </div>
-    
+
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -288,7 +316,7 @@
       <div class="panel-body">
       The total prize money for the winning teams is 2,00,000.  They are divided as follows:<br>
         First Place     -   INR 1,00,000 <br>
-        Second Place    -      INR 60,000 <br>
+        Second Place    -   INR 60,000 <br>
         Third Place     -   INR 40,000 <br>
       </div>
     </div>
@@ -298,38 +326,26 @@
   </div>
 </div>
 
-<!-- Achievements Section -->
-<div id="achievements" class="text-center">
+<!-- Login Section -->
+<div id="login" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>Some Stats</h2>
+      <h2>Register / Login</h2>
       <hr>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="200ms">
-        <div class="achievement-box"> <span class="count">310</span>
-          <h4>Happy Clients</h4>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="400ms">
-        <div class="achievement-box"> <span class="count">4700</span>
-          <h4>Hours of Work</h4>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="600ms">
-        <div class="achievement-box"> <span class="count">30</span>
-          <h4>Awards Won</h4>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="800ms">
-        <div class="achievement-box"> <span class="count">8</span>
-          <h4>Years of Experience</h4>
-        </div>
+      <div class="col-md-4 col-md-offset-4 center text-center">
+        <div class="btn-group">
+      		<a class='btn btn-danger'><i class="fa fa-google-plus" ></i></a>
+      		<a class='btn btn-danger' href='' style="width:12em;"> Sign in with Google</a>
+      	</div>
       </div>
     </div>
   </div>
 </div>
-<!-- Resume Section -->
+
+
+<!-- Schedule Section -->
 <div id="resume" class="text-center">
   <div class="container">
     <div class="section-title center">
@@ -393,14 +409,14 @@
     </div>
     <div class="col-md-8 col-md-offset-2">
       <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
-        <p>4321 California St,<br>
-          San Francisco, CA 12345</p>
+        <p>Center For Innovation,<br>
+          IIT Madras, Chennai 36</p>
       </div>
       <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
-        <p>info@company.com</p>
+        <p>108hackathon@cfi.iitm.ac.in</p>
       </div>
       <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
-        <p> +1 123 456 1234</p>
+        <p> +91 9496 362 472</p>
       </div>
       <div class="clearfix"></div>
     </div>
@@ -444,20 +460,20 @@
 <div id="footer">
   <div class="container text-center">
     <div class="fnav">
-      <p>Copyright &copy; 2016 John Doe. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+      <p>Copyright &copy; 2016 CFI IIT Madras. Designed by <a href="http://www.thewebopsclub.org" rel="nofollow">The WebOps Club</a></p>
     </div>
   </div>
 </div>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script> 
-<script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/easypiechart.js"></script> 
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
-<script type="text/javascript" src="js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="js/jquery.counterup.js"></script> 
-<script type="text/javascript" src="js/waypoints.js"></script> 
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/easypiechart.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/jquery.counterup.js"></script>
+<script type="text/javascript" src="js/waypoints.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
