@@ -48,7 +48,10 @@ $('#nav').affix({
 	//console.log(nagativeValue)
 	});
 
-
+    $('.modal-btn').click(function(event)
+      {
+        $('.navbar-custom').toggle();
+      });
   	// Portfolio isotope filter
     $(window).load(function() {
         var $container = $('.portfolio-items');
