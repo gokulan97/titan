@@ -254,6 +254,20 @@ function dashboard() {
       saveTeam(data);
   });
 
+  $('#logout_button').click(function () {
+    $.ajax({
+      xhrFields: { withCredentials: true },
+      crossDomain: true,
+      type: 'GET',
+      url: AUTH_URL + 'user/logout',
+      success: function(response) {
+        window.location = "/";
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  })
 
 
 }());
