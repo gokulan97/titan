@@ -12,7 +12,7 @@ function dashboard() {
       crossDomain: true,
       headers: {'X-Hasura-Role' : 'user'}
     });
-    
+
   	$('a.page-scroll').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
@@ -52,6 +52,7 @@ $('#nav').affix({
         + params['access_token'];
       $.ajax({
         xhrFields: { withCredentials: true },
+        crossDomain: true,
         type: 'GET',
         url: url,
         success: function(response) {
@@ -65,6 +66,7 @@ $('#nav').affix({
     function loadUser(){
       $.ajax({
         xhrFields: { withCredentials: true },
+        crossDomain: true,
         type: 'GET',
         url: AUTH_URL + '/user/account/info',
         success: function (data) {
@@ -80,6 +82,7 @@ $('#nav').affix({
     function loadTeam() {
       $.ajax({
         xhrFields: { withCredentials: true },
+        crossDomain: true,
         type: 'POST',
         url: DATA_URL,
         data: JSON.stringify({
@@ -105,6 +108,7 @@ $('#nav').affix({
     function createTeam(team) {
       $.ajax({
         xhrFields: { withCredentials: true },
+        crossDomain: true,
         type: 'POST',
         url: DATA_URL,
         data: JSON.stringify({
