@@ -7,7 +7,12 @@ function dashboard() {
 
 (function () {
    'use strict';
-
+   $.ajaxSetup({
+      xhrFields: { withCredentials: true },
+      crossDomain: true,
+      headers: {'X-Hasura-Role' : 'user'}
+    });
+    
   	$('a.page-scroll').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
