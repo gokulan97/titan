@@ -238,7 +238,7 @@ function dashboard() {
     });
   }
 
- $('#logoutDashboard').click(function(e)
+ $('#logout_button').click(function(e)
  {
 logout();
  }); 
