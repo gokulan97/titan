@@ -2,6 +2,10 @@
 function main() {
 
 (function () {
+    if (window.location.hostname === 'localhost') {
+      $('#google_signin_link').attr('href', "https://accounts.google.com/o/oauth2/v2/auth?scope=email&redirect_uri=http://localhost:8080/dashboard.html&response_type=token&client_id=252844604703-37otm075sogq6ggjub35qijh8qbuvqgu.apps.googleusercontent.com")
+    }
+
    'use strict';
 
   	$('a.page-scroll').click(function() {
