@@ -90,7 +90,7 @@ $('#nav').affix({
           args: {
             table: 'team',
             columns: [
-              'id', 'name', {name: 'leader', columns:['name', 'email', 'mobile']},
+              'name', {name: 'leader', columns:['name', 'email', 'mobile']},
               {name: 'member2', columns:['name', 'email', 'mobile']},
               {name: 'member3', columns:['name', 'email', 'mobile']}
             ]
