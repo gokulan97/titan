@@ -72,7 +72,7 @@ function dashboard() {
         type: 'GET',
         url: AUTH_URL + '/user/logout',
         success: function (data) {
-            
+
         },
         error: function (error) {
           console.log(error);
@@ -169,7 +169,8 @@ function dashboard() {
             objects: [
               {
                 name: team,
-                leader_id: USER.hasura_id
+                leader_id: USER.hasura_id,
+                leader_email: USER.email
               }
             ]
           }
@@ -241,7 +242,7 @@ function dashboard() {
  $('#logout_button').click(function(e)
  {
 logout();
- }); 
+ });
 
   $('#register_team_button').click(function(e){
     var terms_agree = $('#agree_to_terms').is(":checked");
@@ -276,8 +277,8 @@ for(var key in fields)
 $("#form_"+fields[key]).val('');
 }
   $('#save_person_button').click(function () {
-  
-  
+
+
     var member_name=$('#form_name').val();
     var member_email=$('#form_email').val();
     var member_mobile=$('#form_mobile').val();
@@ -285,18 +286,23 @@ $("#form_"+fields[key]).val('');
     var moblength=member_mobile.length;
   if (moblength==10&&member_name&&member_email&&member_institute&&member_mobile&&validateEmail(member_email)) {
     $('#save_person_button').html('Saving...');
-     
+
 
     var fields = ['name', 'email', 'mobile', 'institute'];
       var data = {};
       for (var key in fields) {
-        data[EDIT_PERSON + '_' + fields[key] ] = $("#form_"+fields[key]).val();
+        var dataType = EDIT_PERSON + '_' + fields[key];
+        if (dataType == 'leader_email') {
+          // do nothing
+        } else {
+          data[dataType] = $("#form_"+fields[key]).val();
+        }
       }
       console.log(data);
       saveTeam(data);
   }
   else{
-     
+
 
    $('#save_person_button').html('Enter details');}
 
