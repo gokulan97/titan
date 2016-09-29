@@ -45,10 +45,15 @@ $('#nav').affix({
       // And send the token over to the server
       var url = 'https://auth.emergency-108-hackathon.hasura-app.io/google/authenticate?access_token='
         + params['access_token'];
-      $.get(url, function(response) {
-        USER = response;
-        loadTeam();
-        console.log(response);
+      $.ajax({
+        xhrFields: { withCredentials: true },
+        type: 'GET',
+        url: url,
+        success: function(response) {
+          USER = response;
+          loadTeam();
+          console.log(response);
+        }
       });
     }
 
