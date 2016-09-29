@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emergency App Hackathon </title>
+<title>Emergency App Hackathon | Dashboard</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -24,7 +24,6 @@
 <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
 <link href='//fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +36,7 @@
 
 <!-- Navigation -->
 <div id="nav">
-  <nav class="navbar navbar-custom">
+  <nav class="navbar navbar-fixed-top navbar-custom">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
@@ -64,7 +63,7 @@
       <hr>
     </div>
 
-    <div class="row center text-center">
+    <div class="row center text-center" id="register_div" style="display: none;">
       <div class="col-md-12">
         <form class="form-horizontal">
           <fieldset>
@@ -80,7 +79,7 @@
           <!-- Multiple Checkboxes (inline) -->
           <div class="form-group">
             <div class="center text-center">
-                <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                <input type="checkbox" name="checkboxes" id="agree_to_terms" value="1">
                 I agree to <a class="modal-btn" data-toggle="modal" data-target="#termsModal" style="cursor: pointer;">Terms and Conditions</a>
 
             </div>
@@ -96,13 +95,11 @@
           </fieldset>
         </form>
       </div>
-      <div class="col-md-6">
-
-      </div>
     </div>
-    <div class="row center text-center">
+    <div class="row center text-center" id="team_details_div" style="display: none;">
       <h3>Team Details</h3>
       <hr/>
+      Team name: <span id='team_name'>Name of the team</span><br/><br/>
       <table class="table table-bordered table-striped table-hover table-responsive">
       	<thead>
       		<tr>
@@ -110,13 +107,13 @@
 
       			</th>
       			<th>
-      				Member 1 <button class="btn btn-info btn-xs pull-right modal-btn" data-toggle="modal" data-target="#addPeopleModal">Edit</button>
+      				Member 1 <button class="btn btn-info btn-xs pull-right modal-btn edit_person_button" data-person="leader">Edit</button>
       			</th>
       			<th>
-      				Member 2 <button class="btn btn-info btn-xs pull-right modal-btn" data-toggle="modal" data-target="#addPeopleModal">Edit</button>
+      				Member 2 <button class="btn btn-info btn-xs pull-right modal-btn edit_person_button" data-person="member1">Edit</button>
       			</th>
       			<th>
-      				Member 3 <button class="btn btn-info btn-xs pull-right modal-btn" data-toggle="modal" data-target="#addPeopleModal">Edit</button>
+      				Member 3 <button class="btn btn-info btn-xs pull-right modal-btn edit_person_button" data-person="member2">Edit</button>
       			</th>
       		</tr>
       	</thead>
@@ -125,13 +122,13 @@
       			<td>
       				Name
       			</td>
-      			<td>
+      			<td id="leader_name">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member1_name">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member2_name">
       				[CONTENT]
       			</td>
       		</tr>
@@ -139,13 +136,13 @@
       			<td>
       				Email
       			</td>
-      			<td>
+      			<td id="leader_email">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member1_email">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member2_email">
       				[CONTENT]
       			</td>
       		</tr>
@@ -153,13 +150,13 @@
       			<td>
       				Mobile
       			</td>
-      			<td>
+      			<td id="leader_mobile">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member1_mobile">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member2_mobile">
       				[CONTENT]
       			</td>
       		</tr>
@@ -167,13 +164,13 @@
       			<td>
       				Institute
       			</td>
-      			<td>
+      			<td id="leader_institute">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member1_institute">
       				[CONTENT]
       			</td>
-      			<td>
+      			<td id="member2_institute">
       				[CONTENT]
       			</td>
       		</tr>
@@ -203,7 +200,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="leader_name">Member</label>
             <div class="col-md-5">
-            <input id="leader_name" name="leader_name" type="text" placeholder="name" class="form-control input-md" required="">
+            <input id="form_name" name="leader_name" type="text" placeholder="name" class="form-control input-md" required="">
 
             </div>
           </div>
@@ -212,7 +209,15 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="leader_email"></label>
             <div class="col-md-5">
-            <input id="leader_email" name="leader_email" type="text" placeholder="email" class="form-control input-md" required="">
+            <input id="form_email" name="leader_email" type="text" placeholder="email" class="form-control input-md" required="">
+
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="leader_mobil"></label>
+            <div class="col-md-5">
+            <input id="form_mobile" name="leader_mobil" type="text" placeholder="mobile" class="form-control input-md" required="">
 
             </div>
           </div>
@@ -221,26 +226,17 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="leader_institute"></label>
             <div class="col-md-5">
-            <input id="leader_institute" name="leader_institute" type="text" placeholder="institute" class="form-control input-md" required="">
+            <input id="form_institute" name="leader_institute" type="text" placeholder="institute" class="form-control input-md" required="">
 
             </div>
           </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="leader_mobil"></label>
-            <div class="col-md-5">
-            <input id="leader_mobil" name="leader_mobil" type="text" placeholder="mobile" class="form-control input-md" required="">
-
-            </div>
-          </div>
-
 
           </fieldset>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" id="save_person_button">Save</button>
       </div>
     </div>
 
@@ -339,12 +335,6 @@
 </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/SmoothScroll.js"></script>
-<script type="text/javascript" src="js/easypiechart.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.js"></script>
-<script type="text/javascript" src="js/jquery.counterup.js"></script>
-<script type="text/javascript" src="js/waypoints.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>
 </body>
