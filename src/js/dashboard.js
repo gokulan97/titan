@@ -45,13 +45,11 @@ $('#nav').affix({
       // And send the token over to the server
       var url = 'https://auth.emergency-108-hackathon.hasura-app.io/google/authenticate?access_token='
         + params['access_token'];
-        window.location = url;
-      //
-      // $.get(url, function(response) {
-      //   USER = response;
-      //   loadTeam();
-      //   console.log(response);
-      // });
+      $.get(url, function(response) {
+        USER = response;
+        loadTeam();
+        console.log(response);
+      });
     }
 
     function loadUser(){
