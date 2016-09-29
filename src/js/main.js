@@ -1,7 +1,12 @@
+var AUTH_URL = 'https://auth.emergency-108-hackathon.hasura-app.io/';
 
 function main() {
 
 (function () {
+
+  $('#dashboard').hide();
+  $('#logoutNav').hide();
+
     if (window.location.hostname === 'localhost') {
       $('#google_signin_link').attr('href', "https://accounts.google.com/o/oauth2/v2/auth?scope=email&redirect_uri=http://localhost:8080/dashboard.html&response_type=token&client_id=252844604703-37otm075sogq6ggjub35qijh8qbuvqgu.apps.googleusercontent.com")
     }
@@ -79,7 +84,31 @@ $('#nav').affix({
         // }
         console.log(response);
       });
-    }
+    };
+
+
+     function loginStatus(){
+
+      $.ajax({
+        xhrFields: { withCredentials: true },
+        crossDomain: true,
+        type: 'GET',
+        url: AUTH_URL + '/user/account/info',
+        success: function (data) {
+         $('#dashboard').show();
+         $('#logoutNav').show();
+         $('#loginNav').hide();   
+         $('#registerNav').hide();
+        },
+        error: function (error) {
+          console.log(error);
+        },
+        dataType: 'json',
+        contentType: 'application/json'
+      });
+    };
+    loginStatus();
+
   	// Portfolio isotope filter
     $(window).load(function() {
         var $container = $('.portfolio-items');

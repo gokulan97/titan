@@ -6,6 +6,13 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+
+input[type=number].mob::-webkit-inner-spin-button, 
+input[type=number].mob::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 h1 {
 	font-weight: 700;
 }

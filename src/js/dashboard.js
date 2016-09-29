@@ -36,10 +36,10 @@ function dashboard() {
 //       }
 // });
 
-    $('.modal-btn').click(function(event)
-      {
-        $('.navbar-custom').toggle();
-      });
+    // $('.modal-btn').click(function(event)
+      // {
+        // $('.navbar-custom').toggle();
+      // });
 
     // First, parse the query string
     var params = {}, queryString = location.hash.substring(1),
@@ -64,6 +64,23 @@ function dashboard() {
         }
       });
     }
+
+    function logout(){
+      $.ajax({
+        xhrFields: { withCredentials: true },
+        crossDomain: true,
+        type: 'GET',
+        url: AUTH_URL + '/user/logout',
+        success: function (data) {
+            
+        },
+        error: function (error) {
+          console.log(error);
+        },
+        dataType: 'json',
+        contentType: 'application/json'
+      });
+    };
 
     function loadUser(){
       $.ajax({
@@ -221,6 +238,11 @@ function dashboard() {
     });
   }
 
+ $('#logoutDashboard').click(function(e)
+ {
+logout();
+ }); 
+
   $('#register_team_button').click(function(e){
     var terms_agree = $('#agree_to_terms').is(":checked");
     var team_name = $('#team_name_input').val();
@@ -243,15 +265,41 @@ function dashboard() {
       $('#addPeopleModal').modal('show');
   });
 
+
+  function validateEmail(email) {
+  var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(email);
+}
+var fields = ['name', 'email', 'mobile', 'institute'];
+for(var key in fields)
+{
+$("#form_"+fields[key]).val('');
+}
   $('#save_person_button').click(function () {
+  
+  
+    var member_name=$('#form_name').val();
+    var member_email=$('#form_email').val();
+    var member_mobile=$('#form_mobile').val();
+    var member_institute=$('#form_institute').val();
+    var moblength=member_mobile.length;
+  if (moblength==10&&member_name&&member_email&&member_institute&&member_mobile&&validateEmail(member_email)) {
     $('#save_person_button').html('Saving...');
+     
+
     var fields = ['name', 'email', 'mobile', 'institute'];
       var data = {};
       for (var key in fields) {
-        data[EDIT_PERSON + '_' + fields[key] ] = $("#form_"+fields[key]).val()
+        data[EDIT_PERSON + '_' + fields[key] ] = $("#form_"+fields[key]).val();
       }
       console.log(data);
       saveTeam(data);
+  }
+  else{
+     
+
+   $('#save_person_button').html('Enter details');}
+
   });
 
 
