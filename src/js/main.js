@@ -39,7 +39,6 @@ $('#nav').affix({
 	var index=0;
 	$(document).scroll(function(){
 		var top = $('#skills').height()-$(window).scrollTop();
-		console.log(top)
 		if(top<-300){
 			if(index==0){
 
@@ -82,10 +81,24 @@ $('#nav').affix({
         //   "auth_token": "aeo8u3dhauh3d39pdsiaw",
         //   "new_user": true
         // }
-        console.log(response);
+
       });
     };
-
+    //
+    $('#logoutNav').click(function () {
+      $.ajax({
+        xhrFields: { withCredentials: true },
+        crossDomain: true,
+        type: 'GET',
+        url: AUTH_URL + 'user/logout',
+        success: function(response) {
+          window.location = "/";
+        },
+        error: function (error) {
+          //console.log(error);
+        }
+      });
+    });
 
      function loginStatus(){
 
@@ -97,45 +110,22 @@ $('#nav').affix({
         success: function (data) {
          $('#dashboard').show();
          $('#logoutNav').show();
-         $('#loginNav').hide();   
+         $('#loginNav').hide();
+         $('#login').hide();
+         $('#header_register_button').hide();
+         $('#header_dashboard_button').show();
          $('#registerNav').hide();
         },
         error: function (error) {
-          console.log(error);
+          // console.log(error);
         },
         dataType: 'json',
         contentType: 'application/json'
       });
+
+
     };
     loginStatus();
-
-  	// Portfolio isotope filter
-    $(window).load(function() {
-        var $container = $('.portfolio-items');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        $('.cat a').click(function() {
-            $('.cat .active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
-
-    });
 
 
     // CounterUp
@@ -148,10 +138,6 @@ $('#nav').affix({
 		}
 	});
 
-  	// Pretty Photo
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		social_tools: false
-	});
 
 }());
 
