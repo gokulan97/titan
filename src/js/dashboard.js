@@ -114,6 +114,8 @@ function dashboard() {
           }
         }),
         success: function (data) {
+          $('.loading').hide();
+
           if (data.length == 0) {
             $('#register_div').show();
           } else {
