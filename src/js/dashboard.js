@@ -1,5 +1,5 @@
-var DATA_URL = 'https://data.emergency-108-hackathon.hasura-app.io/v1/query';
-var AUTH_URL = 'https://auth.emergency-108-hackathon.hasura-app.io/';
+var DATA_URL = 'https://data.108hackathon.in/v1/query';
+var AUTH_URL = 'https://auth.108hackathon.in/';
 
 var USER;
 var TEAM;
@@ -51,7 +51,7 @@ function dashboard() {
     // Verify that the access_token is in the response
     if (params['access_token']) {
       // And send the token over to the server
-      var url = 'https://auth.emergency-108-hackathon.hasura-app.io/google/authenticate?access_token='
+      var url = AUTH_URL + 'google/authenticate?access_token='
         + params['access_token'];
       $.ajax({
         xhrFields: { withCredentials: true },
