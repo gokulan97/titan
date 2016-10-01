@@ -200,6 +200,34 @@ function dashboard() {
     });
   };
 
+  function deleteTeam() {
+    $.ajax({
+      xhrFields: { withCredentials: true },
+      crossDomain: true,
+      type: 'POST',
+      url: DATA_URL,
+      data: JSON.stringify({
+        type: 'delete',
+        args: {
+          table: 'registration',
+          where: {
+            name: TEAM.team,
+            leader_id: USER.hasura_id,
+          }
+        }
+    }),
+    success: function (data) {
+        window.location = "/dashboard.html";
+    },
+    error: function (error) {
+        $('#delete_registration').html('Error! Try again');
+        console.log(error);
+    },
+    dataType: 'json',
+    contentType: 'application/json'
+  });
+  }
+
   function saveTeam(payload) {
     $.ajax({
       xhrFields: { withCredentials: true },
@@ -330,6 +358,13 @@ $("#form_"+fields[key]).val('');
         console.log(error);
       }
     });
+  });
+
+  $('#delete_registration').click(function(){
+    var result = confirm("Are you sure you want to unregister? All data will be lost!");
+    if (result) {
+      deleteTeam();
+    }
   })
 
 
