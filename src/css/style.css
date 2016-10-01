@@ -223,12 +223,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 #skills .skill {
 	margin-bottom: 40px;
-	text-align: center;
+	text-align: center;class="nested"
 	padding: 0px;
 }
 #skills .skill h4 {
 	font-weight: 600;
 	color: #000;
+}
+.nested {
+	margin-left: 15px;
 }
 .chart {
 	position: relative;

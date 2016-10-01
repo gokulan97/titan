@@ -137,35 +137,50 @@
       <div class="col-md-8 col-md-offset-2 center text-center">
         The theme / problem statement for this hackathon is to develop an
         applicaiton that will help <i>108 Emergency Services</i> to locate the
-        caller, and dispatch as quickly as possible.<br/><br/>
+        caller, and dispatch help / ambulance as quickly as possible.<br/><br/>
         The solution should at least have the following aspects with the given requirements
       </div>
     </div>
     <br/>
     <div class="row">
-      <div class="col-md-4 col-md-offset-2 center">
-        <div class="panel panel-info" style="height: 320px;">
+      <div class="col-md-6 center">
+        <div class="panel panel-info" style="height: 450px;">
           <div class="panel-heading text-center">
             <span><h4>Smartphone App</h4></span>
           </div>
           <div class="panel-body" style="padding: 25px;">
             <ul>
-              <li>Relays the geo-location of caller/user to the call centre</li>
-              <li>Provide information about nearby hospitals and blood banks to user, even in offline mode</li>
+              <li><b><u>For Public</u></b>
+                <ul>
+                  <li class="nested">The app can be used to contact 108 Emergency Services</li>
+                  <li class="nested">An interface that is very intuitive and easy to use under a traumatic situation</li>
+                  <li class="nested">Relays the geo-location of caller/user to the call centre</li>
+                  <li class="nested">Provide information about nearby hospitals to user, even in offline mode</li>
+                </ul>
+              </li>
+              <li><b><u>For Ambulances</u></b>
+                <ul>
+                  <li class="nested">Constantly update the current location to the server</li>
+                  <li class="nested">Receive dispatch calls and show exact location of emergency</li>
+                  <li class="nested">Show the shortest route to reach the destination</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col-md-4 center">
-        <div class="panel panel-info" style="height: 320px;">
+      <div class="col-md-6 center">
+        <div class="panel panel-info" style="height: 450px;">
           <div class="panel-heading text-center">
             <span><h4>Web App</h4></span>
           </div>
           <div class="panel-body" style="padding: 25px;">
             <ul>
-              <li>Simulates the backend infrastructure at the call centre</li>
-              <li>Access database of the locations of all ambulances and hospitals in Tamil Nadu</li>
-              <li>Logs information about every call to a database and dispatches call to nearest ambulance</li>
+              <li>To be used by the call center personnel</li>
+              <li>Show realtime information about callers using app, including their geo-location, as well as the location and status of ambulances</li>
+              <li>Provide facility to add / modify / update location, status and information regarding ambulances and hospitals in Tamil Nadu</li>
+              <li>Recommend the nearest avaliable ambulance from this database, that could be sent to the location</li>
+              <li>Dispatch the call to the app on the ambulance</li>
               <li>Provides an API, to access data stored in the application by other services</li>
             </ul>
           </div>
@@ -269,40 +284,71 @@
           <li>
             <div class="timeline-image">
               <h4>
-                Oct 10</h4>
+                Oct 16</h4>
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4 class="subheading">Preliminiary</h4>
+                <h4 class="subheading">Registration Deadline</h4>
               </div>
               <div class="timeline-body">
-                <p>Submit your solutions online through the upload portal before this date</p>
+                <p>Register your team and submit team member details (1 to 3 members) before this date by logging in.</p>
               </div>
             </div>
           </li>
           <li class="timeline-inverted">
             <div class="timeline-image">
-              <h4>Oct 15</h4>
+              <h4>Oct 23</h4>
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4 class="subheading">Shortlist Release</h4>
+                <h4 class="subheading">Intial Proposal Submission</h4>
               </div>
               <div class="timeline-body">
-                <p>The list of people who have been shortlisted for on-site event will be released by this date</p>
+                <p>Submit your ideas for the app, especially indicating how you are going
+                   to approach the problem and what are the features that your app will be having.</p>
               </div>
             </div>
           </li>
           <li>
             <div class="timeline-image">
-              <h4>Nov 27</h4>
+              <h4>Oct 30</h4>
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4 class="subheading">Finale</h4>
+                <h4 class="subheading">Technical Proposal Submission</h4>
               </div>
               <div class="timeline-body">
-                <p>Finale will be held at IIT Madras tentatively on this date</p>
+                <p>Submit detailed technical description on how you will be implementing
+                  each feature that you have mentioned in the initial proposal. A certain number of teams
+                will be shortlisted from this submission, to build the actual app. Teams will be requred
+              to submit certain tasks/demonstrations along with this sumission.</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>Nov 6th</h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading">Shortlist</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Shortlist of final participants will be released. Teams should start building their app by this time.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <h4>Dec 15</h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading">Grand Finale at IIT Madras</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Shortisted participants will be invited to IIT Madras to showcase their apps and the working
+                in front of an expert judging panel. Resuts will be announced on the same day itself.</p>
               </div>
             </div>
           </li>
@@ -331,7 +377,9 @@
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-        The Emergency Services Hackathon is aimed at developing solutions for a quick and efficient response to emergencies. This is sponsored by the Tamil Nadu Government and aims to incorporate the winning solutions in the real field
+        The Emergency Services Hackathon is aimed at developing solutions for a
+        quick and efficient response to emergencies. This is sponsored by the Tamil Nadu Government
+        and aims to incorporate the winning solutions in the real field of 108 Emergency Services.
       </div>
     </div>
   </div>
@@ -344,7 +392,9 @@
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
-      The solutions should create a smart phone app that uses location data to decrease the time of response for the accident site. This will also involve creating a web service application to simulate the 108 Centre and also log in the data to leverage the benefits of data analytics.
+      The solutions should create a smart phone app that uses location data to
+      decrease the time of response to get help to an accident site. There will be two smartphone applications and
+      one web app. The requirements are mentioned in the Theme.
       </div>
     </div>
   </div>
@@ -357,7 +407,8 @@
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
-      The teams can be anywhere between 1-3 and should have current students as participants. If you have any queries please use the information provided under contact us.
+      The teams can be anywhere between 1-3 and members should be students to participate.
+       If you have any queries please use the information provided under to contact us.
       </div>
     </div>
   </div>
@@ -370,7 +421,8 @@
     </div>
     <div id="collapse4" class="panel-collapse collapse">
       <div class="panel-body">
-        You are encouraged to use any 3rd party services, APIs, open source projects, libraries, and frameworks as long as they are publicly available on the web and do not infringe on any copyrights .
+        You are encouraged to use any 3rd party services, APIs, open source projects, libraries,
+        and frameworks as long as they are publicly available on the web and do not infringe on any copyrights.
       </div>
     </div>
   </div>
@@ -383,7 +435,13 @@
     </div>
     <div id="collapse5" class="panel-collapse collapse">
       <div class="panel-body">
-      There will be a preliminary round involving online submissions and the shortlisted teams will be brought down to IITM for a one day hackathon event where the teams will be allowed to showcase their work to the panel of experts. The online submissions should provide details of the solution such as innovative aspects in the teams approach, progress etc. in the form of a word document. Any pictures and screenshots should can also be inserted in the word document .The Timeline for this is available in the website.
+      There will be a preliminary round involving online submissions and the shortlisted
+      teams will be brought down to IITM for a one day hackathon event where the
+      teams will be allowed to showcase their work to the panel of experts.
+      The online submissions should provide details of the solution such as innovative
+      aspects in the teams approach, progress etc. in the form of a PDF document.
+       Any pictures and screenshots should can also be inserted in the word document.
+       The Timeline for this is available in the website.
       </div>
     </div>
   </div>
@@ -391,12 +449,14 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-            Are Travel Reimbursements provided for shortlisted teams? </a>
+            Are travel reimbursements provided for shortlisted teams? </a>
       </h4>
     </div>
     <div id="collapse6" class="panel-collapse collapse">
       <div class="panel-body">
-      Yes, the shortlisted teams will be provided a travel allowance to cover all/a portion of their travel expenses subject to a cap on the maximum reimbursement provided.
+      Yes, the shortlisted teams will be provided a travel allowance to cover
+       all or a portion of their travel expenses subject to a cap on the maximum
+       reimbursement provided.
       </div>
     </div>
   </div>
@@ -410,9 +470,9 @@
     <div id="collapse7" class="panel-collapse collapse">
       <div class="panel-body">
       The total prize money for the winning teams is 2,00,000.  They are divided as follows:<br>
-        First Place     -   INR 1,00,000 <br>
-        Second Place    -   INR 60,000 <br>
-        Third Place     -   INR 40,000 <br>
+        First Place     -   ₹ 1,00,000 <br>
+        Second Place    -   ₹ 60,000 <br>
+        Third Place     -   ₹ 40,000 <br>
       </div>
     </div>
   </div>

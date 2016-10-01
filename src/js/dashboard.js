@@ -276,11 +276,7 @@ function dashboard() {
     });
   }
 
- $('#logout_button').click(function(e)
- {
-logout();
- });
-
+ 
   $('#register_team_button').click(function(e){
     var terms_agree = $('#agree_to_terms').is(":checked");
     var team_name = $('#team_name_input').val();
