@@ -65,6 +65,10 @@ function dashboard() {
       });
     }
 
+    if (window.location.hostname === 'localhost') {
+      $('#google_signin_link').attr('href', "https://accounts.google.com/o/oauth2/v2/auth?scope=email&redirect_uri=http://localhost:8080/dashboard.html&response_type=token&client_id=252844604703-37otm075sogq6ggjub35qijh8qbuvqgu.apps.googleusercontent.com")
+    }
+
     function logout(){
       $.ajax({
         xhrFields: { withCredentials: true },
@@ -90,9 +94,12 @@ function dashboard() {
         url: AUTH_URL + '/user/account/info',
         success: function (data) {
             USER = data;
+            $('#google_signin_link').hide();
+            $('#loading_overlay').hide();
         },
         error: function (error) {
           console.log(error);
+          $('#loading_overlay').hide();
         },
         dataType: 'json',
         contentType: 'application/json'

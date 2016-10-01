@@ -6,13 +6,6 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
-
-input[type=number].mob::-webkit-inner-spin-button, 
-input[type=number].mob::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
 h1 {
 	font-weight: 700;
 }
@@ -817,4 +810,23 @@ header .intro-text {
 .timeline>li.timeline-inverted>.timeline-panel {
 	padding: 10px 100px 20px 20px;
 }
+}
+
+#loading_overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99999;
+	height: 100%;
+	width: 100%;
+	background: gray;
+	opacity: .8;
+}
+i.fa.fa-cog.fa-spin.fa-3x.fa-fw.loading {
+	color: black;
+}
+#inner_overlay {
+	position:absolute;
+  top: 50%;
+  left:50%;
 }
