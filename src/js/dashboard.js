@@ -74,7 +74,7 @@ function dashboard() {
         xhrFields: { withCredentials: true },
         crossDomain: true,
         type: 'GET',
-        url: AUTH_URL + '/user/logout',
+        url: AUTH_URL + 'user/logout',
         success: function (data) {
 
         },
@@ -91,7 +91,7 @@ function dashboard() {
         xhrFields: { withCredentials: true },
         crossDomain: true,
         type: 'GET',
-        url: AUTH_URL + '/user/account/info',
+        url: AUTH_URL + 'user/account/info',
         success: function (data) {
             USER = data;
             $('#google_signin_link').hide();
@@ -276,7 +276,7 @@ function dashboard() {
     });
   }
 
- 
+
   $('#register_team_button').click(function(e){
     var terms_agree = $('#agree_to_terms').is(":checked");
     var team_name = $('#team_name_input').val();

@@ -85,7 +85,7 @@ $('#nav').affix({
         xhrFields: { withCredentials: true },
         crossDomain: true,
         type: 'GET',
-        url: AUTH_URL + '/user/account/info',
+        url: AUTH_URL + 'user/account/info',
         success: function (data) {
          $('#dashboard').show();
          $('#logoutNav').show();
