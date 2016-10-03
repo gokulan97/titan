@@ -272,6 +272,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	margin-left: 0.1em;
 	font-size: .8em;
 }
+.blue {
+	padding: 100px 0;
+	background: #7bc3d1;
+}
+.blue h2 {
+	color: #fff;
+}
+.blue hr {
+	background: rgba(255,255,255,0.3);
+}
 /*Theme Section*/
 #theme {
 	padding: 100px 0;
