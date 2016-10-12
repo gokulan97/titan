@@ -148,7 +148,7 @@ function dashboard() {
       }
     }
 
-    function createTeam(team) {
+    function createTeam(team_name, inst_name) {
       $.ajax({
         xhrFields: { withCredentials: true },
         crossDomain: true,
@@ -177,9 +177,10 @@ function dashboard() {
             ],
             objects: [
               {
-                name: team,
+                name: team_name,
                 leader_id: USER.hasura_id,
-                leader_email: USER.email
+                leader_email: USER.email,
+                leader_institute: inst_name
               }
             ]
           }
@@ -280,9 +281,10 @@ function dashboard() {
   $('#register_team_button').click(function(e){
     var terms_agree = $('#agree_to_terms').is(":checked");
     var team_name = $('#team_name_input').val();
+    var inst_name = $('#leader_inst_name_input').val();
 
-    if (terms_agree && team_name) {
-      createTeam(team_name);
+    if (terms_agree && team_name && inst_name) {
+      createTeam(team_name, inst_name);
       $('#register_team_button').html('Registering...');
     } else {
       $('#register_team_button').html('Enter team name and agree to terms!');
