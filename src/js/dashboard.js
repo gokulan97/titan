@@ -128,6 +128,7 @@ function dashboard() {
           } else {
             TEAM = data[0];
             $('#team_details_div').show();
+            $('.proposal_submission').show();
           }
           renderTeamDetails();
         },
@@ -190,6 +191,8 @@ function dashboard() {
           $('#register_team_button').html('Registered');
           $('#register_div').hide();
           $('#team_details_div').show();
+
+            $('.proposal_submission').show();
           renderTeamDetails();
       },
       error: function (error) {
@@ -300,6 +303,7 @@ function dashboard() {
         }
       $('#addPeopleModal').modal('show');
   });
+
 
 
   function validateEmail(email) {
