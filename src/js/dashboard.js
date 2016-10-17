@@ -127,6 +127,8 @@ function dashboard() {
             $('#register_div').show();
           } else {
             TEAM = data[0];
+            console.log(TEAM.initial_submission_link);
+
             $('#team_details_div').show();
             $('.proposal_submission').show();
           }
@@ -139,6 +141,11 @@ function dashboard() {
     loadTeam();
 
     function renderTeamDetails () {
+      if (TEAM.initial_submission_link) {
+        console.log('open');
+        $('#current_submission').show();
+        $('#current_submission_link').attr('href', TEAM.initial_submission_link);
+      }
       $('span#team_name').html(TEAM.name);
       var team_copy = $.extend({}, TEAM);
       delete(team_copy.name);
