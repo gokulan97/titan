@@ -842,3 +842,7 @@ i.fa.fa-cog.fa-spin.fa-3x.fa-fw.loading {
   top: 50%;
   left:50%;
 }
+
+#toast-container {
+	top: 80px;
+}
