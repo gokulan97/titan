@@ -18,11 +18,11 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
   }
-
   var toasts = [
+
     {
       type: 'success',
-      message: 'Submissions are now open!'
+      message: 'Submissions are now open! Goto dashboard'
     },
     {
       type: 'info',
