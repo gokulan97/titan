@@ -27,6 +27,10 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
     {
       type: 'info',
       message: 'Schedule has been updated!'
+    },
+    {
+      type: 'success',
+      message: 'Deadline extended till 4th Nov 2016 23:59 hrs!'
     }
   ]
   var i;
