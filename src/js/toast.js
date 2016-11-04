@@ -30,7 +30,7 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
     },
     {
       type: 'success',
-      message: 'Deadline extended till 4th Nov 2016 23:59 hrs!'
+      message: 'Deadline extended till 7th Nov 2016 23:59 hrs!'
     }
   ]
   var i;
