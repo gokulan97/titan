@@ -21,16 +21,8 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
   var toasts = [
 
     {
-      type: 'success',
-      message: 'Submissions are now open! Goto dashboard'
-    },
-    {
       type: 'info',
-      message: 'Schedule has been updated!'
-    },
-    {
-      type: 'success',
-      message: 'Deadline extended till 7th Nov 2016 23:59 hrs!'
+      message: '<a href="https://www.youtube.com/watch?v=8MlE2-59UfQ">Google Hangout at 9:00 pm on Nov. 8th</a>'
     }
   ]
   var i;
