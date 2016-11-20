@@ -81,9 +81,10 @@
 
     <div class="row center text-center" id="register_div" style="display: none;">
       <div class="col-md-12">
+          <p>Registrations have been closed.</p>
+          <!--
         <form class="form-horizontal">
           <fieldset>
-          <!-- Text input-->
           <div class="form-group">
             <label class="col-md-4 control-label text-center" for="team_name">Team name</label>
             <div class="col-md-5">
@@ -99,7 +100,6 @@
             </div>
           </div>
 
-          <!-- Multiple Checkboxes (inline) -->
           <div class="form-group">
             <div class="center text-center">
                 <input type="checkbox" name="checkboxes" id="agree_to_terms" value="1">
@@ -108,7 +108,6 @@
             </div>
           </div>
 
-          <!-- Button -->
           <div class="form-group">
             <div class="center">
               <a id="register_team_button" name="singlebutton" class="btn btn-success">Register</a>
@@ -117,6 +116,7 @@
 
           </fieldset>
         </form>
+          -->
       </div>
     </div>
     <div class="row center text-center" id="team_details_div" style="display: none;">
@@ -288,26 +288,34 @@
 <div id="theme" class="proposal_submission">
   <div class="container">
     <div class="section-title center text-center">
-      <h2>Proposal Submission</h2>
+      <h2>WIP Submission</h2>
       <hr>
     </div>
 
     <div class="row center text-center">
       <div class="col-md-12 center text-center">
 
-        Make a copy of this <a class="white" href="https://goo.gl/U6pcFw" target="_blank">Google Doc</a>,<br/>
-        write your proposal in the format provided, download as PDF and upload the PDF here.
-        <br/>
-        Please note that we have made some changes to the schedule.
+          <p><a href="#" class="btn btn-info" id='wip_current_submission' target="_blank">Current Submission</a></p>
 
-        <br/>
-        <br/>
 
-        <div id="current_submission" style="display: none;">Your current submission is <a class="white" id="current_submission_link" href="#" target="_blank">here</a>. Upload again to change it.</div>
+        <form class="form-horizontal">
+          <fieldset>
+          <div class="form-group">
+            <label class="col-md-4 control-label text-center" for="wip_link">Update Link to WIP</label>
+            <div class="col-md-5">
+            <input id="wip_link_input" name="wip_link" type="text" placeholder="link" class="form-control input-md" required="">
 
-        <br/>
-        <br/>
-        <a class="white btn btn-success" href="https://goo.gl/JPce2b" target="_blank">Upload file</a>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="center">
+              <a id="wip_link_submit_button" name="wip_button" class="btn btn-success">Submit</a>
+            </div>
+          </div>
+
+          </fieldset>
+        </form>
 
       </div>
     </div>

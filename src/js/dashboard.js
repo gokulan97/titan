@@ -146,6 +146,7 @@ function dashboard() {
         $('#current_submission').show();
         $('#current_submission_link').attr('href', TEAM.initial_submission_link);
       }
+      $('#wip_current_submission').attr('href', TEAM.wip_link);
       $('span#team_name').html(TEAM.name);
       var team_copy = $.extend({}, TEAM);
       delete(team_copy.name);
@@ -181,7 +182,8 @@ function dashboard() {
               'member2_email',
               'member2_mobile',
               'member2_institute',
-              'name'
+              'name',
+              'wip_link'
             ],
             objects: [
               {
@@ -239,6 +241,42 @@ function dashboard() {
   });
   }
 
+  function saveWIP(link) {
+    $.ajax({
+      xhrFields: { withCredentials: true },
+      crossDomain: true,
+      type: 'POST',
+      url: DATA_URL,
+      data: JSON.stringify({
+        type: 'update',
+        args: {
+          table: 'registration',
+          $set: {
+            'wip_link': link
+          },
+          where: {
+            id: TEAM.id
+          },
+          returning: [
+              'wip_link'
+          ]
+        }
+      }),
+      success: function (data) {
+        $('#wip_link_submit_button').html('Updated');
+        $('#wip_current_submission').attr('href', data.returning[0].wip_link);
+
+          // Success
+      },
+      error: function (error) {
+        $('#wip_link_submit_button').html('Error! Try again');
+        console.log(error);
+      },
+      dataType: 'json',
+      contentType: 'application/json'
+    });
+  }
+
   function saveTeam(payload) {
     $.ajax({
       xhrFields: { withCredentials: true },
@@ -268,7 +306,8 @@ function dashboard() {
             'member2_email',
             'member2_mobile',
             'member2_institute',
-            'name'
+            'name',
+            'wip_link'
           ]
         }
       }),
@@ -288,7 +327,19 @@ function dashboard() {
   }
 
 
+  $('#wip_link_submit_button').click(function(e){
+    var link=$('#wip_link_input').val();
+    if (link) {
+        saveWIP(link);
+    } else {
+        $('#wip_link_submit_button').html('Error! Check the input');
+    }
+
+  });
+
   $('#register_team_button').click(function(e){
+    $('#register_team_button').html('Registrations have been closed');
+    /*
     var terms_agree = $('#agree_to_terms').is(":checked");
     var team_name = $('#team_name_input').val();
     var inst_name = $('#leader_inst_name_input').val();
@@ -299,6 +350,7 @@ function dashboard() {
     } else {
       $('#register_team_button').html('Enter team name and agree to terms!');
     }
+    */
   });
 
   $('.edit_person_button').click(function () {

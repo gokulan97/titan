@@ -22,7 +22,7 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
 
     {
       type: 'info',
-      message: '<a href="https://www.youtube.com/watch?v=8MlE2-59UfQ">Google Hangout at 9:00 pm on Nov. 8th</a>'
+      message: 'WIP submission deadline has been extended till Nov. 25th'
     }
   ]
   var i;
