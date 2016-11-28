@@ -22,7 +22,7 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
 
     {
       type: 'info',
-      message: 'WIP submission deadline has been extended till Nov. 25th'
+      message: 'The shortlist will be anounced on Dec 2nd.'
     }
   ]
   var i;
