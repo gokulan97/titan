@@ -22,7 +22,11 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
 
     {
       type: 'info',
-      message: 'The shortlist will be anounced on Dec 2nd.'
+      message: 'The shortlist will be anounced on Dec 5th.'
+    },
+    {
+      type: 'info',
+      message: 'The final event date will be announced on Dec 5th.'
     }
   ]
   var i;
