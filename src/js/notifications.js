@@ -22,11 +22,11 @@ $.getScript("//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", f
 
     {
       type: 'info',
-      message: 'The shortlist will be anounced on Dec 5th.'
+      message: 'The finalists have been announced, please check dashboard.'
     },
     {
       type: 'info',
-      message: 'The final event date will be announced on Dec 5th.'
+      message: 'The final event date is on December 17th Saturday and 18th Sunday 2016'
     }
   ]
   var i;
