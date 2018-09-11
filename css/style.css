@@ -179,10 +179,11 @@ hr {
 	padding: 100px 0;
 	text-align: center;
 	color: #fff;
-	background: url(../img/intro-bg.JPG) no-repeat center top;
+	background: #000;
+	/*background: url(../img/Titan-Company-Logo.jpg) right center no-repeat;*/
 	background-blend-mode: multiply;
 	background-color: #7bc3d1;
-	-webkit-background-size: cover;
+	-webkit-background-size: ;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
@@ -222,7 +223,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	color: #000;
 }
 #skills hr {
-	background: rgba(255,255,255,0.3);
+	/*background: rgba(255,255,255,0.3);*/
 }
 #skills .skill {
 	margin-bottom: 40px;
