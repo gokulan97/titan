@@ -180,7 +180,7 @@ hr {
 	text-align: center;
 	color: #fff;
 	background: #000;
-	/*background: url(../img/Titan-Company-Logo.jpg) right center no-repeat;*/
+	/*background: url(../img/903.jpg) right center no-repeat;*/
 	background-blend-mode: multiply;
 	background-color: #7bc3d1;
 	-webkit-background-size: ;
@@ -716,6 +716,12 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	color: #7bc3d1;
 }
 
+@media(max-width: 320px) {
+	.intro-img {
+		display: none;
+	}
+}
+
 /* Media Queries */
 @media(min-width:768px) {
 .intro {
@@ -729,23 +735,37 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-weight: 500;
 	letter-spacing: -2px;
 }
+
+.intro h2 {
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: -2px;
+}
 .intro .name {
 	font-weight: 600;
 }
 .intro .intro-text {
-	max-width: 75%;
+	max-width: 50%;
+	display: inline-block;
 }
+
+.intro .intro-img {
+	margin-top: 100px;
+	border-radius: 50%;
+	max-width: 500px;
+}
+
 .intro .intro-text p {
 	font-family: 'Lato', sans-serif;
-	font-size: 20px;
+	font-size: 30px;
 	margin-bottom: 40px;
 	margin-top: 20px;
 }
 section {
 	padding: 120px 0;
 }
-header .intro-text {
-	padding-top: 300px;
+header .intro-text{
+	padding-top: 200px;
 	padding-bottom: 200px;
 }
 .timeline:before {
